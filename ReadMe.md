@@ -1,6 +1,6 @@
 # MVP Template Model
 
-<img src="../Read-img.png" >
+<img src="./Read-img.png" >
 
 > Modelo do site antigo da Hashtag Treinamentos.
 > Modelo criado para pratica de Front-End.
