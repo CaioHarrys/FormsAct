@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulários</title>
+    <link
+      rel="stylesheet"
+      href="../SRC/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="../SRC/CSS/style.css" />
+  </head>
+  <body class="bg-white p-4">
+    <div class="container">
+      <h2 class="text-center text-primary mb-4">Formulário Completo</h2>
+      <a href="../index.html">Voltar</a>
+
+      <form>
+        <fieldset class="mb-4">
+          <legend>Dados Pessoais</legend>
+
+          <!-- 1. Nome -->
+          <div class="mb-3">
+            <label for="nome" class="form-label">Nome:</label>
+            <input type="text" class="form-control" id="nome" required />
+          </div>
+
+          <!-- 2. Email -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" required />
+          </div>
+
+          <!-- 3. Idade -->
+          <div class="mb-3">
+            <label for="idade" class="form-label">Idade:</label>
+            <input type="number" class="form-control" id="idade" required />
+          </div>
+
+          <!-- 4. Data de nascimento -->
+          <div class="mb-3">
+            <label for="nascimento" class="form-label"
+              >Data de nascimento:</label
+            >
+            <input type="date" class="form-control" id="nascimento" />
+          </div>
+
+          <!-- 5. Gênero (radio) -->
+          <div class="mb-3">
+            <label class="form-label">Gênero:</label>
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="genero"
+                id="masc"
+                required
+              />
+              <label for="masc" class="form-check-label">Masculino</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                name="genero"
+                id="fem"
+              />
+              <label for="fem" class="form-check-label">Feminino</label>
+            </div>
+          </div>
+
+          <!-- 6. Aceita notificações (checkbox obrigatório) -->
+          <div class="form-check mb-3">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="notificacoes"
+              required
+            />
+            <label for="notificacoes" class="form-check-label"
+              >Aceito receber notificações</label
+            >
+          </div>
+
+          <!-- 7. País (select) -->
+          <div class="mb-3">
+            <label class="form-label">País:</label>
+            <select class="form-select">
+              <option>Brasil</option>
+              <option>Portugal</option>
+              <option>Estados Unidos</option>
+            </select>
+          </div>
+
+          <!-- 8. Estado civil -->
+          <div class="mb-3">
+            <label for="estado-civil" class="form-label">Estado civil:</label>
+            <select id="estado-civil" class="form-select">
+              <option>Solteiro</option>
+              <option>Casado</option>
+              <option>Divorciado</option>
+            </select>
+          </div>
+
+          <!-- 9. Cor favorita (input color) -->
+          <div class="mb-3">
+            <label for="cor" class="form-label">Cor favorita:</label>
+            <input
+              type="color"
+              class="form-control form-control-color"
+              id="cor"
+            />
+          </div>
+
+          <!-- 10. Avaliação de 1 a 10 (range) -->
+          <div class="mb-3">
+            <label for="avaliacao" class="form-label"
+              >Avaliação (1 a 10):</label
+            >
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="10"
+              id="avaliacao"
+            />
+          </div>
+
+          <!-- 11. Telefone -->
+          <div class="mb-3">
+            <label for="telefone" class="form-label">Telefone:</label>
+            <input type="tel" class="form-control" id="telefone" />
+          </div>
+
+          <!-- 12. Site pessoal -->
+          <div class="mb-3">
+            <label for="site" class="form-label">Site pessoal:</label>
+            <input type="url" class="form-control" id="site" />
+          </div>
+
+          <!-- 13. Tempo disponível (checkboxes) -->
+          <div class="mb-3">
+            <label class="form-label">Período disponível:</label>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="manha" />
+              <label for="manha" class="form-check-label">Manhã</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="tarde" />
+              <label for="tarde" class="form-check-label">Tarde</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="noite" />
+              <label for="noite" class="form-check-label">Noite</label>
+            </div>
+          </div>
+
+          <!-- 14. Área de interesse -->
+          <div class="mb-3">
+            <label for="area" class="form-label">Área de interesse:</label>
+            <input type="text" class="form-control" id="area" />
+          </div>
+
+          <!-- 15. Comentários -->
+          <div class="mb-3">
+            <label for="comentarios" class="form-label"
+              >Comentários adicionais:</label
+            >
+            <textarea class="form-control" id="comentarios" rows="3"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="text-center">
+          <button type="reset" class="btn btn-secondary me-2">Resetar</button>
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
